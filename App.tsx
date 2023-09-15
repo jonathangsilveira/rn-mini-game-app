@@ -1,6 +1,5 @@
 import { StyleSheet, View } from 'react-native';
 import StartGameScreen from './screens/StartGameScreen';
-import PrimaryButton from './components/PrimaryButton';
 
 export default function App() {
   return (<StartGameScreen />);
