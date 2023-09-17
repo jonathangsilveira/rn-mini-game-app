@@ -2,6 +2,14 @@ import { StyleSheet, TextInput, View } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 
 const StartGameScreen = () => {
+    const onResetClicked = () => {
+        console.log("Reset button clicked!")   
+    }
+    
+    const onConfirmClicked = () => {
+        console.log("Confirm button clicked!")   
+    }
+
     return (
         <View style={styles.inputContainer}>
             <TextInput 
@@ -10,8 +18,8 @@ const StartGameScreen = () => {
                 keyboardType="number-pad"
                 autoCapitalize="none"
                 autoCorrect={false} />
-            <PrimaryButton text="Reset" />
-            <PrimaryButton text="Confirm" />
+            <PrimaryButton text="Reset" onClicked={onResetClicked}/>
+            <PrimaryButton text="Confirm" onClicked={onConfirmClicked}/>
         </View>
     );
 }
