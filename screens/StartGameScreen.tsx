@@ -18,15 +18,23 @@ const StartGameScreen = () => {
                 keyboardType="number-pad"
                 autoCapitalize="none"
                 autoCorrect={false} />
-            <PrimaryButton text="Reset" onClicked={onResetClicked}/>
-            <PrimaryButton text="Confirm" onClicked={onConfirmClicked}/>
+            <View style={styles.buttonsContainer}>
+                <View style={styles.buttonContainer}>
+                    <PrimaryButton text="Reset" onClicked={onResetClicked}/>
+                </View>
+                <View style={styles.buttonContainer}>
+                    <PrimaryButton text="Confirm" onClicked={onConfirmClicked}/>
+                </View>
+            </View>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     inputContainer: {
-        //flex: 1, // It will make the container take all the available space 
+        //flex: 1, // It will make the container take all the available space
+        justifyContent: 'center',
+        alignItems: 'center',
         padding: 16,
         marginTop: 100,
         marginHorizontal: 24,
@@ -48,6 +56,12 @@ const styles = StyleSheet.create({
         marginVertical: 8,
         fontWeight: 'bold',
         textAlign: 'center'
+    },
+    buttonsContainer: {
+        flexDirection: 'row',
+    },
+    buttonContainer: {
+        flex: 1
     }
 });
 
