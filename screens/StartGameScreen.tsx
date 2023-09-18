@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         marginTop: 100,
         marginHorizontal: 24,
         borderRadius: 8,
-        backgroundColor: '#4e0329',
+        backgroundColor: '#3b021f',
         elevation: 8, // Specific to Android. It doesn't work on iOS. (Suck it Steve Jobs!!!)
         shadowColor: 'black', // Specific to iOS.
         shadowOffset: { width: 0, height: 2 }, // Specific to iOS.
