@@ -2,9 +2,10 @@ import { Alert, StyleSheet, TextInput, View, } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 import { useState } from "react";
 import { Int32 } from "react-native/Libraries/Types/CodegenTypes";
+import Colors from "../constants/colors";
 
 export type StartGameScreenProps = {
-    onConfirNumber: (number: number) => any
+    onConfirmNumber: (number: number) => any
 }
 
 const StartGameScreen = (props: StartGameScreenProps) => {
@@ -30,7 +31,7 @@ const StartGameScreen = (props: StartGameScreenProps) => {
             );
             return;
         }
-        props.onConfirNumber(number);
+        props.onConfirmNumber(number);
     }
 
     const onEnterNumber = (value: string) => {
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
         marginTop: 100,
         marginHorizontal: 24,
         borderRadius: 8,
-        backgroundColor: '#3b021f',
+        backgroundColor: Colors.primary800,
         elevation: 8, // Specific to Android. It doesn't work on iOS. (Suck it Steve Jobs!!!)
         shadowColor: 'black', // Specific to iOS.
         shadowOffset: { width: 0, height: 2 }, // Specific to iOS.
@@ -79,9 +80,9 @@ const styles = StyleSheet.create({
         height: 48,
         width: 48,
         fontSize: 20,
-        borderBottomColor: '#ddb52f',
+        borderBottomColor: Colors.accent500,
         borderBottomWidth: 2,
-        color: '#ddb52f',
+        color: Colors.accent500,
         marginVertical: 8,
         fontWeight: 'bold',
         textAlign: 'center'
