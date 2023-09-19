@@ -1,8 +1,13 @@
 import { Alert, StyleSheet, TextInput, View, } from "react-native";
 import PrimaryButton from "../components/PrimaryButton";
 import { useState } from "react";
+import { Int32 } from "react-native/Libraries/Types/CodegenTypes";
 
-const StartGameScreen = () => {
+export type StartGameScreenProps = {
+    onConfirNumber: (number: number) => any
+}
+
+const StartGameScreen = (props: StartGameScreenProps) => {
     const [enteredNumber, setEnteredNumber] = useState('');
 
     const onResetClicked = () => {
@@ -25,6 +30,7 @@ const StartGameScreen = () => {
             );
             return;
         }
+        props.onConfirNumber(number);
     }
 
     const onEnterNumber = (value: string) => {
